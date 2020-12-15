@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Memory
+
+
+@admin.register(Memory)
+class MemoryAdmin(admin.ModelAdmin):
+    list_display = ['name', 'comment']

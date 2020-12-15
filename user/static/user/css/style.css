@@ -32,5 +32,12 @@ header .container {
 .homepage .profile__name {
   font-size: 20px;
 }
+.homepage .memories .card {
+  width: 280px;
+  min-width: 280px;
+}
+.homepage .memories .card-body {
+  border-radius: 0 0 5px 5px;
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -8,4 +8,5 @@ urlpatterns = [
     path("logout/", LogoutView.as_view(), name="logout"),
     path('social-auth/', include('social_django.urls', namespace="social")),
     path("home/", views.home, name="home"),
+    path('home/create', views.MemoryCreateView.as_view(), name='memory_create'),
 ]

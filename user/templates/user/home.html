@@ -20,15 +20,26 @@
                             <span>{{ ass.extra_data.name }}</span>
                         </div>
                         <div class="profile__new-memory mt-4">
-                            <a class="btn btn-primary" href="#">New memory</a>
+                            <a class="btn btn-primary" href="{% url 'memory_create' %}">New memory</a>
                         </div>
                     </div>
                 </div>
                 <hr>
             {% endfor %}
 
-            <div class="memories">
-                <h2 class="text-center">You don't have a single memory</h2>
+            <div class="memories d-flex justify-content-center flex-wrap">
+                {% if not user.memories.all %}
+                    <h2 class="text-center">You don't have a single memory</h2>
+                {% else %}
+                    {% for memory in user.memories.all %}
+                        <div class="card m-3 border-0">
+                            <div class="card-header text-white bg-primary">{{ memory.name }}</div>
+                            <div class="card-body border border-primary">
+                                <p class="card-text">{{ memory.comment }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
             </div>
         </div>
     </section>
