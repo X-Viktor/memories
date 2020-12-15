@@ -3,11 +3,35 @@
 {% block title %}Home{% endblock %}
 
 {% block authorization %}
-    <a href="{% url 'logout' %}" class="text-white text-right ml-4">Logout</a>
+    <a href="{% url 'logout' %}" class="text-white text-right ml-4 btn btn-danger">Logout</a>
 {% endblock %}
 
 {% block content %}
-    
+    <section class="homepage">
+        <div class="container">
+            {% for ass in backends.associated %}
+                <div class="profile d-flex align-items-center mt-5">
+                    <div class="profile__photo">
+                        <img class="border border-primary" src="{{ ass.extra_data.picture.data.url }}" alt="Photo"
+                             width="150" height="150">
+                    </div>
+                    <div class="ml-3">
+                        <div class="profile__name mb-4">
+                            <span>{{ ass.extra_data.name }}</span>
+                        </div>
+                        <div class="profile__new-memory mt-4">
+                            <a class="btn btn-primary" href="#">New memory</a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            {% endfor %}
+
+            <div class="memories">
+                <h2 class="text-center">You don't have a single memory</h2>
+            </div>
+        </div>
+    </section>
 {% endblock %}
 
 {% block script %}

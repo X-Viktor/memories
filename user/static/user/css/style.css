@@ -26,4 +26,11 @@ header .container {
   width: 100%;
 }
 
+.homepage .profile__photo img {
+  border-radius: 25%;
+}
+.homepage .profile__name {
+  font-size: 20px;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -33,3 +33,17 @@ header {
     }
   }
 }
+
+.homepage {
+  .profile {
+    &__photo {
+      img {
+        border-radius: 25%;
+      }
+    }
+
+    &__name {
+      font-size: 20px;
+    }
+  }
+}
