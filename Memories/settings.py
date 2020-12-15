@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social_django',
     'user',
 ]
 
@@ -83,6 +84,14 @@ DATABASES = {
 }
 
 
+# Authentication
+
+AUTHENTICATION_BACKENDS = [
+    'social_core.backends.facebook.FacebookOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -114,6 +123,14 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+
+# Redirects
+
+LOGIN_URL = 'main'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_URL = 'logout'
+LOGOUT_REDIRECT_URL = 'main'
 
 
 # Static files (CSS, JavaScript, Images)

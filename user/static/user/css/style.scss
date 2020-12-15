@@ -1,0 +1,33 @@
+body {
+  min-width: 320px;
+}
+
+header {
+  height: 8vh;
+}
+
+.main {
+  height: 92vh;
+
+  div {
+    height: 50%;
+  }
+
+  &__title {
+    font-size: 40px;
+  }
+
+  &__description {
+    color: #5c5c5c;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.8em;
+  }
+
+  &__image {
+    img {
+      max-width: 800px;
+      width: 100%;
+    }
+  }
+}

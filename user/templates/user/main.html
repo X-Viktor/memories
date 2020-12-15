@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block heading %}Memories{% endblock %}
+
+{% block authorization %}Login with Facebook{% endblock %}
+
+{% block content %}
+    <section class="main pt-5 text-primary">
+        <div class="col container text-center">
+            <h2 class="main__title font-weight-light">Capture your travel history</h2>
+            <p class="main__description pt-3">
+                The app allows you to store memories of the places you visit.
+                <br>
+                Just log in with Facebook and start using it now.
+            </p>
+        </div>
+        <div class="main__image d-flex justify-content-center align-items-end">
+            {% load static %}
+            <img src="{% static 'user/img/travel.png' %}" alt="travel">
+        </div>
+    </section>
+{% endblock %}
