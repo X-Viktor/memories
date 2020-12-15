@@ -1,9 +1,13 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
 
 
 def main(request):
-    return render(request, 'user/main.html')
+    if request.user.is_authenticated:
+        return HttpResponseRedirect('/home/')
+    else:
+        return render(request, 'user/main.html')
 
 
 @login_required

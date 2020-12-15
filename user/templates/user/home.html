@@ -2,12 +2,18 @@
 
 {% block title %}Home{% endblock %}
 
-{% block heading %}Your profile{% endblock %}
+{% block authorization %}
+    <a href="{% url 'logout' %}" class="text-white text-right ml-4">Logout</a>
+{% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="col-sm-12 mb-3">
-       <h4 class="text-center"> Welcome {{ user.username }} </h4>
-    </div>
-</div>
+    
+{% endblock %}
+
+{% block script %}
+    <script type="text/javascript">
+        if (window.location.hash === '#_=_') {
+            window.location.hash = '';
+        }
+    </script>
 {% endblock %}

@@ -65,6 +65,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -131,6 +133,22 @@ LOGIN_URL = 'main'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_URL = 'logout'
 LOGOUT_REDIRECT_URL = 'main'
+
+
+# Facebook application data
+
+SOCIAL_AUTH_FACEBOOK_KEY = '852877201923350'
+SOCIAL_AUTH_FACEBOOK_SECRET = '6653d29ebf71a893e11969d1621525e2'
+
+# Facebook fields
+
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+  'fields': 'id, name, picture.type(large)'
+}
+SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [
+    ('name', 'name'),
+    ('picture', 'picture'),
+]
 
 
 # Static files (CSS, JavaScript, Images)

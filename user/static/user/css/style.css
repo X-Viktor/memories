@@ -2,7 +2,7 @@ body {
   min-width: 320px;
 }
 
-header {
+header .container {
   height: 8vh;
 }
 

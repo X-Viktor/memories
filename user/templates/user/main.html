@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 
-{% block heading %}Memories{% endblock %}
+{% block title %}Memories{% endblock %}
 
-{% block authorization %}Login with Facebook{% endblock %}
+{% block authorization %}
+    <a href="{% url 'social:begin' 'facebook' %}" class="text-white text-right ml-4">Login with Facebook</a>
+{% endblock %}
 
 {% block content %}
     <section class="main pt-5 text-primary">

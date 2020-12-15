@@ -3,7 +3,9 @@ body {
 }
 
 header {
-  height: 8vh;
+  .container {
+    height: 8vh;
+  }
 }
 
 .main {
