@@ -2,6 +2,7 @@ from django.db import models
 
 
 class Memory(models.Model):
+    location = models.CharField(max_length=250)
     name = models.CharField(max_length=150)
     comment = models.TextField()
 
@@ -13,7 +14,6 @@ class Memory(models.Model):
 
     class Meta:
         verbose_name_plural = 'Memories'
-
 
     def __str__(self):
         return self.name

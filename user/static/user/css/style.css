@@ -40,4 +40,11 @@ header .container {
   border-radius: 0 0 5px 5px;
 }
 
+.memory-create #map {
+  height: 400px;
+}
+.memory-create form p:nth-child(2) {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */

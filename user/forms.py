@@ -4,6 +4,10 @@ from .models import Memory
 
 
 class MemoryCreateForm(forms.ModelForm):
+    location = forms.CharField(
+        widget=forms.TextInput(attrs={'class': 'form-control', 'max_length': 250}),
+        required=True,
+    )
     name = forms.CharField(
         widget=forms.TextInput(attrs={'class': 'form-control', 'max_length': 125}),
         required=True,
@@ -15,4 +19,4 @@ class MemoryCreateForm(forms.ModelForm):
 
     class Meta:
         model = Memory
-        fields = ('name', 'comment')
+        fields = ('location', 'name', 'comment')

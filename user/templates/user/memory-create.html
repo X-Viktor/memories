@@ -2,10 +2,18 @@
 
 {% block title %}Create new memory{% endblock %}
 
+{% block head %}
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=3a91b6df-d5c0-4e8f-bdda-ba2e41ee0fac"
+            type="text/javascript"></script>
+    {% load static %}
+    <script src="{% static 'user/js/map.js' %}" type="text/javascript"></script>
+{% endblock %}
+
 {% block content %}
-    <section>
-        <div class="container mt-3">
-            <form action="{% url 'memory_create' %}" method="POST">
+    <section class="memory-create">
+        <div class="container mt-3 mb-3">
+            <div id="map"></div>
+            <form action="{% url 'memory_create' %}" method="POST" class="mt-3">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <button type="submit" class="btn btn-success">Create</button>
