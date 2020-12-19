@@ -1,0 +1,1 @@
+web: gunicorn Memories.wsgi --log-file -
