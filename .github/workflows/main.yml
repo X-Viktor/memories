@@ -33,7 +33,7 @@ jobs:
        run: pip install -r requirements.txt coverage
        
      - name: Run tests
-       run: coverage run src/tests.py
+       run: coverage run manage.py test
        
      - name: Tests report
        run: coverage report
