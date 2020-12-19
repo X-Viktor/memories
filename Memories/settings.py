@@ -163,11 +163,9 @@ STATICFILES_DIRS = (
 )
 
 
-# Simplified static file serving.
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-
 # Activate Django-Heroku.
 
-django_heroku.settings(locals())
+if 'HOME' in os.environ:
+    if '/app' in os.environ['HOME']:
+        import django_heroku
+        django_heroku.settings(locals())
