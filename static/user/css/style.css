@@ -5,6 +5,11 @@ body {
 header .container {
   height: 8vh;
 }
+@media screen and (max-width: 410px) {
+  header .container a {
+    font-size: 12px;
+  }
+}
 
 .main {
   height: 92vh;

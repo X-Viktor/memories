@@ -5,6 +5,12 @@ body {
 header {
   .container {
     height: 8vh;
+
+    @media screen and (max-width: 410px) {
+      a {
+        font-size: 12px;
+      }
+    }
   }
 }
 
